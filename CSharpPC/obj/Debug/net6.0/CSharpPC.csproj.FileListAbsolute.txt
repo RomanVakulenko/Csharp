@@ -1,0 +1,15 @@
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\CSharpPC.exe
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\CSharpPC.deps.json
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\CSharpPC.runtimeconfig.json
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\CSharpPC.dll
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\ref\CSharpPC.dll
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\bin\Debug\net6.0\CSharpPC.pdb
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.csproj.AssemblyReference.cache
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.GeneratedMSBuildEditorConfig.editorconfig
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.AssemblyInfoInputs.cache
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.AssemblyInfo.cs
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.csproj.CoreCompileInputs.cache
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.dll
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\ref\CSharpPC.dll
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.pdb
+C:\D\Обучение\Разработчик\1 четверть\4 Знакомство с языками программирования\Myself\CSharpPC\obj\Debug\net6.0\CSharpPC.genruntimeconfig.cache
