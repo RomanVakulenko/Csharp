@@ -173,69 +173,6 @@
 
 
 //  8. Показать четные числа от 1 до N
-Console.Clear();
-string s;
-Console.Write("Введите целое неотрицательное число N: ");
-s = Console.ReadLine();
-int N = Convert.ToInt32(s);
-Console.WriteLine("длинна массива от 1 до N =  " + N + " элементам");
-
-int[] array = new int[N]; // создай новый массив, в котором будет N элементов, заполнен по умолчанию нулями
-FromOnetoN(array);
-
-void FromOnetoN(int[] collection)
-{
-    int length = collection.Length;
-    int index = 0;
-    for (index = 0; index != length; index++)
-    {
-        if (index % 2 == 0)
-        {
-            collection[index] = index;
-        }
-        
-    }                       // после выполнения кода выше имеем массив 0,0,2,0,4,0,6,0,8,0
-    int count = 0;
-
-    for (count =0, index =2; index!= length; count++)               //                  2. count=1, index=4   3. count=2, index=6  
-    {
-        if (collection[index]> 0)                                      // 1. если 2>0   2. 4>0        
-        {
-            collection[count] = collection[index];                     // 1. ,то 0ый=2  2. ,то 1ый=4
-            if (index <N) index = index+2;                             // 1. index =4   2. index =6
-            
-        } 
-    }
-}
-int n1 = N/2-1;
-//     int[] arrayEven = new int[n1];
-//     int i = 0;
-//     for (i=0, count=0; i<n1; i++, count++)
-//     {
-//         arrayEven[i] = collection[count];
-//     }
-//             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-//             int[] b = { 11, 12, 13, 14, 15, 16, 17, 18, 19 };
- 
-//             for (int i = 0; i < a.Length; i +=2)
-//                 b[i] = a[i];
-//             Console.WriteLine(string.Join(" ",b));
-//             Console.ReadKey();
-       
-Console.WriteLine(); // записывает на новую строку пустоту - т.е. делаем пустую строку!
-Console.WriteLine(string.Join(",", array));
-Console.WriteLine();
-int i=0;
-for (; i<n1; i++)
-{
-    Console.Write(array[i] + ",");  
-}
-// int[] numbers = { 1, 2, 3, 5};
- 
-// Console.WriteLine(numbers[^1]);  // 5 - последний элемент с конца
-// Console.WriteLine(numbers[^2]);  // 3 - предпоследний элемент с конца
-// Console.WriteLine(numbers[^3]);  // 2 - третий элемент с конца
-
 //  9. Показать последнюю цифру трёхзначного числа
 // 10. Показать вторую цифру трёхзначного числа
 // // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
