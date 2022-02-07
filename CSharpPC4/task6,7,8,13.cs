@@ -77,6 +77,13 @@
 // Console.WriteLine(result);
 
 //  5. Написать программу вычисления значения функции y = f(a)
+
+int y (int functionA)
+{
+    return functionA*12;
+}
+System.Console.WriteLine(y(10));
+
 //  6. Выяснить является ли число чётным
 
 // int numberA = new Random().Next(1, 10); // 1 2 3 4 ... 9
@@ -297,18 +304,17 @@
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
-double a=6;
-double b=4;
-bool multiple (double a, double b)
-{
-    if (a%b==0) return true; 
-    else return false;
-}
-multiple (6,4);   // запускаю метод, определяющий кратность
+// double a=6;
+// double b=4;
+// bool multiple (double a, double b)
+// {
+//     if (a%b==0) return true; 
+//     else return false;
+// }
+// multiple (6,4);   // запускаю метод, определяющий кратность
 
-if (multiple(6,4)==true) Console.WriteLine(" - число кратное - multiple in English");  
-else Console.WriteLine ($"{a} % {b} = {a%b} - остаток от деления");
-
+// if (multiple(6,4)==true) Console.WriteLine(" - число кратное - multiple in English");  
+// else Console.WriteLine ($"{a} % {b} = {a%b} - остаток от деления");
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 
