@@ -87,15 +87,15 @@
 // } else Console.WriteLine(" - число нечетное - odd in English");
 
 //6.1. написать метод, определяющий четное или нечетное число было введено с клавиатуры и выводящий ответ
-bool OddOrEven (int numberA)       //пытаюсь написать метод, определяющий четное или нечетное число, введенное с клавиатуры
-{
-    // if (numberA %2 ==0) return true; else return false;
-    return numberA%2==0;  //вместо строки выше можно использовать такую конструцию
-}
+// bool OddOrEven (int numberA)       //пытаюсь написать метод, определяющий четное или нечетное число, введенное с клавиатуры
+// {
+//     // if (numberA %2 ==0) return true; else return false;
+//     return numberA%2==0;  //вместо строки выше можно использовать такую конструцию
+// }
 
-OddOrEven(6);                     // запускаю метод, определяющий четное или нечетное число было введено с клавиатуры и выводящий ответ
-if ( OddOrEven(6)==true) Console.WriteLine(" - число четное - even in English");  
-else Console.WriteLine(" - число нечетное - odd in English");
+// OddOrEven(6);                     // запускаю метод, определяющий четное или нечетное число было введено с клавиатуры и выводящий ответ
+// if ( OddOrEven(6)==true) Console.WriteLine(" - число четное - even in English");  
+// else Console.WriteLine(" - число нечетное - odd in English");
 
 
 //  7. Показать числа от -N до N
@@ -296,5 +296,19 @@ else Console.WriteLine(" - число нечетное - odd in English");
 
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+
+double a=6;
+double b=4;
+bool multiple (double a, double b)
+{
+    if (a%b==0) return true; 
+    else return false;
+}
+multiple (6,4);   // запускаю метод, определяющий кратность
+
+if (multiple(6,4)==true) Console.WriteLine(" - число кратное - multiple in English");  
+else Console.WriteLine ($"{a} % {b} = {a%b} - остаток от деления");
+
+
 // 14. Найти третью цифру числа или сообщить, что её нет
 
