@@ -82,7 +82,7 @@ int y (int functionA)
 {
     return functionA*12;
 }
-System.Console.WriteLine(y(10));
+System.Console.WriteLine(y(10)); 
 
 //  6. Выяснить является ли число чётным
 
