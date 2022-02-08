@@ -78,11 +78,11 @@
 
 //  5. Написать программу вычисления значения функции y = f(a)
 
-int y (int functionA)
+int y(int functionA)
 {
-    return functionA*12;
+    return functionA * 12;
 }
-System.Console.WriteLine(y(10)); 
+System.Console.WriteLine(y(10));
 
 //  6. Выяснить является ли число чётным
 
@@ -195,7 +195,7 @@ System.Console.WriteLine(y(10));
 //         {
 //             collection[index] = index;
 //         }
-        
+
 //     }                       // после выполнения кода выше имеем массив 0,0,2,0,4,0,6,0,8,0
 //     int count = 0;
 
@@ -205,7 +205,7 @@ System.Console.WriteLine(y(10));
 //         {
 //             collection[count] = collection[index];                     // 1. ,то 0ый=2  2. ,то 1ый=4
 //             if (index <N) index = index+2;                             // 1. index =4   2. index =6
-            
+
 //         } 
 //     }
 // }
@@ -218,12 +218,12 @@ System.Console.WriteLine(y(10));
 // //     }
 // //             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 // //             int[] b = { 11, 12, 13, 14, 15, 16, 17, 18, 19 };
- 
+
 // //             for (int i = 0; i < a.Length; i +=2)
 // //                 b[i] = a[i];
 // //             Console.WriteLine(string.Join(" ",b));
 // //             Console.ReadKey();
-       
+
 // Console.WriteLine(); // записывает на новую строку пустоту - т.е. делаем пустую строку!
 // Console.WriteLine(string.Join(",", array));
 // Console.WriteLine();
@@ -233,7 +233,7 @@ System.Console.WriteLine(y(10));
 //     Console.Write(array[i] + ",");  
 // }
 // int[] numbers = { 1, 2, 3, 5};
- 
+
 // Console.WriteLine(numbers[^1]);  // 5 - последний элемент с конца
 // Console.WriteLine(numbers[^2]);  // 3 - предпоследний элемент с конца
 // Console.WriteLine(numbers[^3]);  // 2 - третий элемент с конца
@@ -304,17 +304,17 @@ System.Console.WriteLine(y(10));
 // 12. Удалить вторую цифру трёхзначного числа
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
-double a=6;
-double b=4;
-bool multiple (double a, double b)
+double a = 6;
+double b = 4;
+bool multiple(double a, double b)
 {
-    if (a%b==0) return true; 
+    if (a % b == 0) return true;
     else return false;
 }
-multiple (a,b);   // запускаю метод, определяющий кратность
+multiple(a, b);   // запускаю метод, определяющий кратность
 
-if (multiple(a,b)==true) Console.WriteLine(" - число кратное - multiple in English");  
-else Console.WriteLine ($"{a} % {b} = {a%b} - остаток от деления");
+if (multiple(a, b) == true) Console.WriteLine(" - число кратное - multiple in English");
+else Console.WriteLine($"{a} % {b} = {a % b} - остаток от деления");
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 
