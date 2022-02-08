@@ -80,25 +80,46 @@ if (Checking = true) Console.WriteLine("Утверждение истинно");
 else System.Console.WriteLine("Утверждение ложно");
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+// int x = new Random().Next(-3, 3);
+int x;
+do
+{
+    x = new Random().Next(-1, 2);
+}
+while (x==0);
+System.Console.WriteLine("x = " + x);
+int y;
+do
+{
+    y = new Random().Next(-1, 2);
+}
+while (y==0);
+System.Console.WriteLine("y = " + y);
+
+if (x < 0 & y > 0) System.Console.WriteLine("1 четверть");
+else if (x > 0 & y > 0) System.Console.WriteLine("2 четверть");
+else if (x > 0 & y < 0) System.Console.WriteLine("3 четверть");
+else if (x < 0 & y < 0) System.Console.WriteLine("4 четверть");
+else System.Console.WriteLine("x or y was equal 0 by random number, look: x =" + x + " y = " + y);
+
 // 20. Задать номер четверти, показать диапазоны для возможных координат
 // 21. Программа проверяет пятизначное число на палиндромом.
-
 int[] arr = { 5, 4, 3, 4, 5 };
 Console.WriteLine(); // делаем пустую строку
 Console.WriteLine(string.Join("", arr));
 
 bool palindrome(int[] array)
 {
-    int i=0;
+    int i = 0;
     if (array[0] == array[^1] & array[1] == array[^2]) return true;
-    else if (array[i] == array[^(i+1)] & i< (array.Length/2))
+    else if (array[i] == array[^(i + 1)] & i < (array.Length / 2))
     {
-        i++; 
+        i++;
         return true;
     }
     else return false;
 }
-    
+
 if (palindrome(arr) == true) Console.WriteLine("Введенное число является палиндромом");
 else Console.WriteLine("Число - не палиндром");
 Console.WriteLine();
