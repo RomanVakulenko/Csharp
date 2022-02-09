@@ -15,7 +15,8 @@ multiple(a, d);   // запускаю метод, определяющий кр�
 
 if (multiple(a, d) == true) Console.WriteLine(" - число кратное 7 и 23 - multiple in English");
 else Console.WriteLine("число некратное 7 и 23");
-Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №16:");
 
 // 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным 
 
@@ -32,7 +33,8 @@ else
 {
     Console.WriteLine("День недели - будний, т.к.: " + weekDays[q]);
 }
-Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №17:");
 
 // 17. По двум заданным числам проверять является ли одно квадратом другого
 int w = new Random().Next(4, 50);
@@ -47,13 +49,11 @@ bool checkForMathPow(int w, int e)
 }
 if (checkForMathPow(w, e) == true) Console.WriteLine("Вывод: 1ое число является квадратом 2ого");
 else Console.WriteLine("Вывод: 1ое число не является квадратом 2ого");
-Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №18:");
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 // не(х или у) = не х и не у - логически проверил - истинно, a как решить его через консоль??
-
-Console.Clear();
-
 bool[] arrT = { true, false };
 bool[] arrG = { true, false };
 int number1 = 0;
@@ -78,6 +78,8 @@ for (int i = 0; i < 2; i++)
 }
 if (Checking = true) Console.WriteLine("Утверждение истинно");
 else System.Console.WriteLine("Утверждение ложно");
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №19:");
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // int x = new Random().Next(-3, 3);
@@ -101,11 +103,21 @@ else if (x > 0 & y > 0) System.Console.WriteLine("2 четверть");
 else if (x > 0 & y < 0) System.Console.WriteLine("3 четверть");
 else if (x < 0 & y < 0) System.Console.WriteLine("4 четверть");
 else System.Console.WriteLine("x or y was equal 0 by random number, look: x =" + x + " y = " + y);
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №20:");
 
 // 20. Задать номер четверти, показать диапазоны для возможных координат
+int quadrantNumber = new Random().Next(1, 5);
+System.Console.WriteLine(quadrantNumber + " - это номер четверти, показать диапазоны для возможных координат:");
+if (quadrantNumber==1) System.Console.WriteLine("Диапазон для возможных координат x < 0 & y > 0");
+else if (quadrantNumber==2) System.Console.WriteLine("Диапазон для возможных координат x > 0 & y > 0");
+else if (quadrantNumber==3) System.Console.WriteLine("Диапазон для возможных координат x > 0 & y < 0");
+else if (quadrantNumber==4) System.Console.WriteLine("Диапазон для возможных координат x < 0 & y < 0");
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №21:");
+
 // 21. Программа проверяет пятизначное число на палиндромом.
 int[] arr = { 5, 4, 3, 4, 5 };
-Console.WriteLine(); // делаем пустую строку
 Console.WriteLine(string.Join("", arr));
 
 bool palindrome(int[] array)
@@ -122,6 +134,7 @@ bool palindrome(int[] array)
 
 if (palindrome(arr) == true) Console.WriteLine("Введенное число является палиндромом");
 else Console.WriteLine("Число - не палиндром");
-Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine("Ниже задача №22:");
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
