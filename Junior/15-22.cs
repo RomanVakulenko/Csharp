@@ -135,6 +135,15 @@ bool palindrome(int[] array)
 if (palindrome(arr) == true) Console.WriteLine("Введенное число является палиндромом");
 else Console.WriteLine("Число - не палиндром");
 System.Console.WriteLine();
-System.Console.WriteLine("Ниже задача №22:");
+System.Console.WriteLine("22. Найти расстояние между точками в пространстве 2D/3D");
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
+int o = 2; int p = 0; //one dot
+int g = 2; int h = 10; // another dot of range
+
+int projectionX = g-o;
+int projectionY = h-p;
+System.Console.WriteLine(projectionX + " - the lenght of projectionX");
+System.Console.WriteLine(projectionY + " - the lenght of projectionY");
+double range = Math.Sqrt(projectionX * projectionX + projectionY * projectionY);
+System.Console.WriteLine(range + " - the lenght of range");
