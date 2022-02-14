@@ -138,12 +138,12 @@ System.Console.WriteLine();
 System.Console.WriteLine("22. Найти расстояние между точками в пространстве 2D/3D");
 
 // 22. Найти расстояние между точками в пространстве 2D/3D
-int o = 2; int p = 0; //one dot
-int g = 2; int h = 10; // another dot of range
+int o = 2; int p = 4; //one dot
+int g = 6; int h = 10; // another dot of range
 
 int projectionX = g-o;
 int projectionY = h-p;
 System.Console.WriteLine(projectionX + " - the lenght of projectionX");
 System.Console.WriteLine(projectionY + " - the lenght of projectionY");
 double range = Math.Sqrt(projectionX * projectionX + projectionY * projectionY);
-System.Console.WriteLine(range + " - the lenght of range");
+System.Console.WriteLine(Math.Round(range, 2) + " - the lenght of range");
