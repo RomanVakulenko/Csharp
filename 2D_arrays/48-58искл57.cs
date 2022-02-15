@@ -132,8 +132,36 @@ System.Console.WriteLine();
 ChangeArray50(arr50);
 
 // // 51. Задать двумерный массив следующим правилом: Aₘₙ = m+n
-// System.Console.WriteLine();
-// System.Console.WriteLine("51. Задать двумерный массив следующим правилом: Aₘₙ = m+n");
+System.Console.WriteLine();
+System.Console.WriteLine("51. Задать двумерный массив следующим правилом: Aₘₙ = m+n");
+int M = 3; int N = 4;
+int[,] arr51 = new int [M,N];
+
+void CustomArray51(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = i + j;
+        }
+    }
+}
+void PrintArray51(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+CustomArray51(arr51);
+PrintArray51(arr51);
+
 
 // 52. В двумерном массиве заменить элементы, у которых оба индекса чётные на их квадраты
 System.Console.WriteLine();
@@ -343,13 +371,69 @@ FillArr(Arr);
 PrintArr(Arr);
 SimpleAverageOfColumnsOfArr(Arr);
 // // 56. Написать программу, которая обменивает элементы первой строки и последней строки
+System.Console.WriteLine();
+System.Console.WriteLine("56. Написать программу, которая обменивает элементы первой строки и последней строки");
+
+int e = 3; int r = 4;
+int[,] arr56 = new int [e,r];
+
+void FillArray56(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(0, 5);// [1; 5)
+        }
+    }
+}
+
+void PrintArray56(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+void SwapArray56(int[,] matr)
+{
+    int forSave =0;
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {   
+            if (i==0)
+            {
+                forSave = matr[i, j];  
+                matr[i, j] = matr[matr.GetLength(0)-1, j];
+                matr[matr.GetLength(0)-1, j] = forSave;        
+            }
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+FillArray56(arr56);
+PrintArray56(arr56);
+System.Console.WriteLine();
+System.Console.WriteLine("1 & last rows are swapped:");
+SwapArray56(arr56);
+
+// 57. Написать программу упорядочивания элементов каждой строки двумерного массива по убыванию .
+System.Console.WriteLine();
+System.Console.WriteLine("57. Написать программу упорядочивания элементов каждой строки двумерного массива по убыванию .");
+
+// 58. Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).
 // System.Console.WriteLine();
-// System.Console.WriteLine("56. Написать программу, которая обменивает элементы первой строки и последней строки");
+// System.Console.WriteLine("58. Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).");
+// int q = 4; int w = 4;
+// int[,] arr58 = new int [q,w];
 
-// int e = 4; int r = 5;
-// int[,] arr56 = new int [e,r];
-
-// void FillArray56(int[,] matr)
+// void FillArray58(int[,] matr)
 // {
 //     for (int i = 0; i < matr.GetLength(0); i++)
 //     {
@@ -360,7 +444,7 @@ SimpleAverageOfColumnsOfArr(Arr);
 //     }
 // }
 
-// void PrintArray56(int[,] matr)
+// void PrintArray58(int[,] matr)
 // {
 //     for (int i = 0; i < matr.GetLength(0); i++)
 //     {
@@ -372,88 +456,34 @@ SimpleAverageOfColumnsOfArr(Arr);
 //     }
 // }
 
-// // void ChangeArray56(int[,] matr)
-// // {
-// //     int[] forSave = new int[];
-// //     for (int j = 0; j < matr.GetLength(1); j++)
-// //     {
-// //         for (int i = 0; i < matr.GetLength(0); i++)
-// //         {
-// //             Console.Write($"{matr[i, j]} ");
-// //         }
-// //         int d = 0;
-// //         if (d==0) 
-// //         {
-// //             forSave = matr[d, j]; 
-// //             matr[d, j] = matr[e-1, j];
-// //             matr[e-1, j] = forSave;
-// //         }
-// //         Console.WriteLine();
-// //     }   
-// // }
-// FillArray56(arr56);
-// PrintArray56(arr56);
+// void ChangeArray58(int[,] matr)
+// {
+//     if (q==w)
+//     {
+//         System.Console.WriteLine("The amount of rows is equal to the amount of columns, that is why we can change rows to columns & vice versa");
+//         int forSave = 0;
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             for (int i = 0; i < matr.GetLength(0); i++)
+//             {
+//                 Console.Write($"{matr[i, j]} ");
+//             }
+//             int t = 0;
+//             if (t==0) 
+//             {
+//                 forSave = matr[t, j]; 
+//                 matr[t, j] = matr[q-1, j];
+//                 matr[q-1, j] = forSave;
+//             }
+//             Console.WriteLine();
+//         } 
+//     }
+//     else System.Console.WriteLine("Can't change rows to columns because the matrix is not square");  
+// }
+// FillArray58(arr58);
+// PrintArray58(arr58);
 // System.Console.WriteLine();
-// ChangeArray56(arr56);
-
-// 57. Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
-// 58. Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).
-System.Console.WriteLine();
-System.Console.WriteLine("58. Написать программу, которая в двумерном массиве заменяет строки на столбцы или сообщить, что это невозможно (в случае, если матрица не квадратная).");
-int q = 4; int w = 4;
-int[,] arr58 = new int [q,w];
-
-void FillArray58(int[,] matr)
-{
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            matr[i, j] = new Random().Next(0, 5);// [1; 5)
-        }
-    }
-}
-
-void PrintArray58(int[,] matr)
-{
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            Console.Write($"{matr[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
-
-void ChangeArray58(int[,] matr)
-{
-    if (q==w)
-    {
-        System.Console.WriteLine("The amount of rows is equal to the amount of columns, that is why we can change rows to columns & vice versa");
-        int forSave = 0;
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            for (int i = 0; i < matr.GetLength(0); i++)
-            {
-                Console.Write($"{matr[i, j]} ");
-            }
-            int t = 0;
-            if (t==0) 
-            {
-                forSave = matr[t, j]; 
-                matr[t, j] = matr[q-1, j];
-                matr[q-1, j] = forSave;
-            }
-            Console.WriteLine();
-        } 
-    }
-    else System.Console.WriteLine("Can't change rows to columns because the matrix is not square");  
-}
-FillArray58(arr58);
-PrintArray58(arr58);
-System.Console.WriteLine();
-ChangeArray58(arr58);
+// ChangeArray58(arr58);
 
 // 59. В прямоугольной матрице найти строку с наименьшей суммой элементов.
 // 60. Составить частотный словарь элементов двумерного массива
