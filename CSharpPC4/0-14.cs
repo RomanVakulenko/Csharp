@@ -7,7 +7,7 @@
 
 //  1. По двум заданным числам проверять является ли первое квадратом второго
 // Console.Clear();
-// string s;
+// string s = String.Empty;
 // Console.Write("Введите 1ое число и нажмите клавишу Enter: ");
 // s = Console.ReadLine();
 // int number1 = Convert.ToInt32(s);
@@ -78,11 +78,11 @@
 
 //  5. Написать программу вычисления значения функции y = f(a)
 
-int y(int functionA)
-{
-    return functionA * 12;
-}
-System.Console.WriteLine(y(10));
+// int y(int functionA)
+// {
+//     return functionA * 12;
+// }
+// System.Console.WriteLine(y(10));
 
 //  6. Выяснить является ли число чётным
 
@@ -170,68 +170,70 @@ System.Console.WriteLine(y(10));
 //         }
 //     }
 // }
-// Console.WriteLine(); // записывает на новую строку пустоту - т.е. делаем пустую строку!
+// Console.WriteLine();
 // Console.WriteLine(string.Join(",", array));
 
 
 //  8. Показать четные числа от 1 до N
-// Console.Clear();
-// string s;
-// Console.Write("Введите целое неотрицательное число N: ");
-// s = Console.ReadLine();
-// int N = Convert.ToInt32(s);
-// Console.WriteLine("длинна массива от 1 до N =  " + N + " элементам");
+Console.Clear();
+System.Console.WriteLine("8.Показать четные числа от 1 до N");
+string s;
+Console.Write("Введите целое четное неотрицательное число N>=4: ");
+s = Console.ReadLine();
+int N = Convert.ToInt32(s);
+Console.WriteLine("длинна массива от 1 до N =  " + N + " элементам");
 
-// int[] array = new int[N]; // создай новый массив, в котором будет N элементов, заполнен по умолчанию нулями
-// FromOnetoN(array);
+int[] array = new int[N]; // создай новый массив, в котором будет N элементов, заполнен по умолчанию нулями
+FromOnetoN(array);
 
-// void FromOnetoN(int[] collection)
-// {
-//     int length = collection.Length;
-//     int index = 0;
-//     for (index = 0; index != length; index++)
+void FromOnetoN(int[] collection)
+{
+    int length = collection.Length;
+    int index = 0;
+    for (index = 0; index != length; index++)
+    {
+        if (index % 2 == 0)
+        {
+            collection[index] = index;
+        }
+
+    }                       // после выполнения кода выше имеем массив 0,0,2,0,4,0,6,0,8,0
+    int count = 0;
+
+    for (count =0, index =2; index!= length; count++)               //                  2. count=1, index=4   3. count=2, index=6  
+    {
+        if (collection[index]> 0)                                      // 1. если 2>0   2. 4>0        
+        {
+            collection[count] = collection[index];                     // 1. ,то 0ый=2  2. ,то 1ый=4
+            if (index <N) index = index+2;                             // 1. index =4   2. index =6
+
+        } 
+    }
+}
+int n1 = N/2-1;
+//     int[] arrayEven = new int[n1];
+//     int i = 0;
+//     for (i=0, count=0; i<n1; i++, count++)
 //     {
-//         if (index % 2 == 0)
-//         {
-//             collection[index] = index;
-//         }
-
-//     }                       // после выполнения кода выше имеем массив 0,0,2,0,4,0,6,0,8,0
-//     int count = 0;
-
-//     for (count =0, index =2; index!= length; count++)               //                  2. count=1, index=4   3. count=2, index=6  
-//     {
-//         if (collection[index]> 0)                                      // 1. если 2>0   2. 4>0        
-//         {
-//             collection[count] = collection[index];                     // 1. ,то 0ый=2  2. ,то 1ый=4
-//             if (index <N) index = index+2;                             // 1. index =4   2. index =6
-
-//         } 
+//         arrayEven[i] = collection[count];
 //     }
-// }
-// int n1 = N/2-1;
-// //     int[] arrayEven = new int[n1];
-// //     int i = 0;
-// //     for (i=0, count=0; i<n1; i++, count++)
-// //     {
-// //         arrayEven[i] = collection[count];
-// //     }
-// //             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-// //             int[] b = { 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+//             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//             int[] b = { 11, 12, 13, 14, 15, 16, 17, 18, 19 };
 
-// //             for (int i = 0; i < a.Length; i +=2)
-// //                 b[i] = a[i];
-// //             Console.WriteLine(string.Join(" ",b));
-// //             Console.ReadKey();
+//             for (int i = 0; i < a.Length; i +=2)
+//                 b[i] = a[i];
+//             Console.WriteLine(string.Join(" ",b));
+//             Console.ReadKey();
 
-// Console.WriteLine(); // записывает на новую строку пустоту - т.е. делаем пустую строку!
-// Console.WriteLine(string.Join(",", array));
-// Console.WriteLine();
-// int i=0;
-// for (; i<n1; i++)
-// {
-//     Console.Write(array[i] + ",");  
-// }
+Console.WriteLine(); 
+Console.WriteLine(string.Join(",", array));
+Console.WriteLine();
+
+int i=0;
+for (; i<n1; i++)
+{
+    Console.Write(array[i] + ",");  
+}
 // int[] numbers = { 1, 2, 3, 5};
 
 // Console.WriteLine(numbers[^1]);  // 5 - последний элемент с конца
@@ -239,7 +241,50 @@ System.Console.WriteLine(y(10));
 // Console.WriteLine(numbers[^3]);  // 2 - третий элемент с конца
 
 //  9. Показать последнюю цифру трёхзначного числа
+System.Console.WriteLine();
+System.Console.WriteLine("9. Показать последнюю цифру трёхзначного числа");
+int[] array3 = new int[3];
+
+void FillArray(int[] arr)
+{
+    Random random=new Random();       //Создали объект класса Random и назвали random, создаем рандомный массив
+    for(int i=0;i<arr.Length;i++)
+    arr[i]=random.Next(1,10);
+}
+
+void Print(int[] arr)                // выводим его на консоль
+{
+for(int i=0;i<arr.Length;i++)
+System.Console.Write($"{arr[i]}");
+}
+FillArray(array3);
+Print(array3);
+System.Console.WriteLine(", последняя цифра 3ех значного числа = " + array3[2]);
+
+
 // 10. Показать вторую цифру трёхзначного числа
+
+System.Console.WriteLine();
+System.Console.WriteLine("10. Показать вторую цифру трёхзначного числа");
+int[] array10 = new int[3];
+
+void FillArray10(int[] arr)
+{
+    Random random=new Random();       //Создали объект класса Random и назвали random, создаем рандомный массив
+    for(int i=0;i<arr.Length;i++)
+    arr[i]=random.Next(1,10);
+}
+
+void Print10(int[] arr)                // выводим его на консоль
+{
+for(int i=0;i<arr.Length;i++)
+System.Console.Write($"{arr[i]}");
+}
+FillArray10(array10);
+Print10(array10);
+System.Console.WriteLine(", 2ая цифра 3ех значного числа = " + array10[1]);
+
+
 // // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 // void FillArray(int[] collection)   // метод, наполняющий массив случайными целыми числами
 // {
@@ -302,19 +347,58 @@ System.Console.WriteLine(y(10));
 // // Console.WriteLine(Max(array));
 
 // 12. Удалить вторую цифру трёхзначного числа
+
+System.Console.WriteLine();
+System.Console.WriteLine("12. Удалить вторую цифру трёхзначного числа");
+int[] array12 = new int[3];
+
+void FillArray12(int[] arr)
+{
+    Random random=new Random();       //Создали объект класса Random и назвали random, создаем рандомный массив
+    for(int i=0;i<arr.Length;i++)
+    arr[i]=random.Next(1,10);
+}
+
+void Print12(int[] arr)                // выводим его на консоль
+{
+for(int i=0;i<arr.Length;i++)
+System.Console.Write($"{arr[i]}");
+}
+FillArray12(array12);
+Print12(array12);
+System.Console.WriteLine(", удалили 2ую цифру 3ех значного числа = " + array12[0] + array12[2]);
+
+
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
-double a = 6;
-double b = 4;
-bool multiple(double a, double b)
-{
-    if (a % b == 0) return true;
-    else return false;
-}
-multiple(a, b);   // запускаю метод, определяющий кратность
+// double a = 6;
+// double b = 4;
+// bool multiple(double a, double b)
+// {
+//     if (a % b == 0) return true;
+//     else return false;
+// }
+// multiple(a, b);   // запускаю метод, определяющий кратность
 
-if (multiple(a, b) == true) Console.WriteLine(" - число кратное - multiple in English");
-else Console.WriteLine($"{a} % {b} = {a % b} - остаток от деления");
+// if (multiple(a, b) == true) Console.WriteLine(" - число кратное - multiple in English");
+// else Console.WriteLine($"{a} % {b} = {a % b} - остаток от деления");
 
 // 14. Найти третью цифру числа или сообщить, что её нет
+
+System.Console.WriteLine();
+System.Console.WriteLine("14. Найти третью цифру числа или сообщить, что её нет");
+
+// Перевод из строки в число
+string s1 = String.Empty;
+Console.Write("Введите число: ");
+s1 = Console.ReadLine(); //считать введенное
+
+// int number1 = Convert.ToInt32(s1);
+
+// Перевод числа в строку
+// int string1 = Convert.ToStrnig (s);
+int length = s1.Length;
+if (length>2)
+System.Console.Write(", третья цифра числа = " + s1[2]);
+else System.Console.Write(", число двузначное, третьей цифры нет.");
 
