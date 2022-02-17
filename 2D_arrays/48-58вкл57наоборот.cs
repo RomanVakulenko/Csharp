@@ -423,7 +423,7 @@
 // System.Console.WriteLine("1 & last rows are swapped:");
 // SwapArray56(arr56);
 
-// 57. Написать программу упорядочивания элементов каждой строки двумерного массива по убыванию .
+// // 57. Написать программу упорядочивания элементов каждой строки двумерного массива по убыванию .
 System.Console.WriteLine();
 System.Console.WriteLine("57. Написать программу упорядочивания элементов каждой строки двумерного массива по убыванию .");
 
@@ -555,6 +555,70 @@ SortArray57(arr57);
 // ChangeArray58(arr58);
 
 // 59. В прямоугольной матрице найти строку с наименьшей суммой элементов.
+System.Console.WriteLine();
+System.Console.WriteLine("59. В прямоугольной матрице найти строку с наименьшей суммой элементов.");
+int A1 = 3; int A2 = 4;
+int[,] arr59 = new int [A1,A2];
+
+void FillArray59(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(0, 5);// [1; 5)
+        }
+    }
+}
+
+void PrintArray59(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void RowInArrayWithMinSumOfColumns(int[,] matr)
+{
+    int[] ArrOfRowsSums = new int[matr.GetLength(0)];
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        int sumOfColumns = 0;
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            sumOfColumns = sumOfColumns + matr[i, j];
+        }
+        Console.WriteLine("RowInArrayWithMinSumOfColumns is equal to " + sumOfColumns);
+        System.Console.Write ("Array sums of rows: ");
+        ArrOfRowsSums[i] = sumOfColumns;
+        System.Console.WriteLine("[{0}]", string.Join("  ", ArrOfRowsSums));
+
+    }
+
+    int minSum = ArrOfRowsSums[0];
+    int NumberOfMinSum = 1;
+    for (int i = 1; i < ArrOfRowsSums.Length; i++)
+    {
+        if (ArrOfRowsSums[i]<minSum) 
+        {
+            minSum=ArrOfRowsSums[i];
+            NumberOfMinSum = i+1;  
+        }
+    }
+    System.Console.WriteLine("The min sum of columns of all rows is " + NumberOfMinSum);
+}
+
+
+FillArray59(arr59);
+PrintArray59(arr59);
+System.Console.WriteLine();
+RowInArrayWithMinSumOfColumns(arr59);
+
 // 60. Составить частотный словарь элементов двумерного массива
 
 // Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
@@ -633,6 +697,67 @@ SortArray57(arr57);
 // [url](https://abakbot.ru/online-5/97-freq-letter "источник")
 
 // 61. Найти произведение двух матриц
+System.Console.WriteLine();
+System.Console.WriteLine("61. Найти произведение двух матриц");
+int[,] nums1 = new int[,] { { 0, 1 }, { 2, 3 } };
+int[,] nums2 = new int[,] { { 4, 6 }, { 5, 7 } };
+
+// void FillArray61(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             matr[i, j] = new Random().Next(0, 10);// [1; 10)
+//         }
+//     }
+// }
+void PrintArray61(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+void TheProductof2arrays(int[,] matr, int[,] matr1)
+{
+    int[,] product = new int[matr.GetLength(0),matr.GetLength(1)];
+
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(0); j++)
+        {
+            product[i, j] = 0;
+            for (int k = 0; k < matr.GetLength(0); k++)
+            {
+                product[i, j] += matr[i, k] * matr1[k, j];
+            }
+        }
+    }
+    Console.Write("TheProductof2arrays is equal to ");
+    
+    Console.WriteLine();
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(0); j++)
+        {
+            Console.Write(product[i, j]);
+            Console.Write(" ");
+        }
+    Console.WriteLine();
+    }
+}
+
+PrintArray61(nums1);
+PrintArray61(nums2);
+System.Console.WriteLine();
+TheProductof2arrays(nums1, nums2);
+
 // 62. В двумерном массиве целых чисел. Удалить строку и столбец, на пересечении которых расположен наименьший элемент.
 // 63. Сформировать трехмерный массив не повторяющимися двузначными числами показать его построчно на экран выводя индексы соответствующего элемента
 // 64. Показать треугольник Паскаля
