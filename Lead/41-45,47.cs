@@ -98,25 +98,42 @@
 // x.Reverse();          //Получить обратный порядок элементов, т.е. 178, 14, 70, 14, -6, 27, 51
 
 // 44. Найти точку пересечения двух прямых заданных уравнением y = k1 * x + b1, y = k2 * x + b2, b1 k1 и b2 и k2 заданы
-// 45. Показать числа Фибоначчи
-int [] fibo = new int [25];
 
-void FillArrayFibo(int[] array)   // метод, наполняющий массив случайными целыми числами и копирующий его
+int k1 = 2; int b1=3;
+int k2 = 4; int b2 = 5;
+int y1, y2; 
+
+int[] xr = new int [1000000];
+for (int i = 1; i < xr.Length; i++)
 {
-    for (int index = 0; index < array.Length; index++)
-    {
-        if (index==0) array[index]=0;
-        else if (index==1) array[index]=1;
-            else
-            {
-                array[index] = array[index-1]+array[index-2];    
-            }
-        System.Console.Write($"{array[index]} ");
-    } 
+    int x;
+    xr[i] = -500000+i;
+    x = xr[i];
+    y1 = Math.Abs(k1 * x + b1);
+    y2 = Math.Abs(k2 * x + b2);
+    if (y1-y2 == 0) System.Console.WriteLine("Crossing at x = " + x);
 }
 
-FillArrayFibo(fibo);
-System.Console.WriteLine("- fibo sequence");
+
+// 45. Показать числа Фибоначчи
+// int [] fibo = new int [25];
+
+// void FillArrayFibo(int[] array)   // метод, наполняющий массив случайными целыми числами и копирующий его
+// {
+//     for (int index = 0; index < array.Length; index++)
+//     {
+//         if (index==0) array[index]=0;
+//         else if (index==1) array[index]=1;
+//             else
+//             {
+//                 array[index] = array[index-1]+array[index-2];    
+//             }
+//         System.Console.Write($"{array[index]} ");
+//     } 
+// }
+
+// FillArrayFibo(fibo);
+// System.Console.WriteLine("- fibo sequence");
 // 46. Написать программу масштабирования фигуры
 // ```
 // Тут для тех кто далеко улетел, чтобы задавались вершины фигуры списком (одной строкой)
