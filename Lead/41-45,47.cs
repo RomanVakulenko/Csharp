@@ -103,7 +103,8 @@ int k1 = 2; int b1=3;
 int k2 = 4; int b2 = 5;
 int y1, y2; 
 
-int[] xr = new int [1000000];
+bool flag = false;
+int[] xr = new int [1000000]; 
 for (int i = 1; i < xr.Length; i++)
 {
     int x;
@@ -111,9 +112,14 @@ for (int i = 1; i < xr.Length; i++)
     x = xr[i];
     y1 = Math.Abs(k1 * x + b1);
     y2 = Math.Abs(k2 * x + b2);
-    if (y1-y2 == 0) System.Console.WriteLine("Crossing at x = " + x);
+    if (y1-y2 == 0) 
+    {
+        flag = true;
+        System.Console.WriteLine("Crossing at x = " + x);
+    }
 }
-
+if (flag ==true) System.Console.WriteLine("Есть пересечение");
+else System.Console.WriteLine("Нет пересечения");
 
 // 45. Показать числа Фибоначчи
 // int [] fibo = new int [25];
