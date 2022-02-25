@@ -99,27 +99,28 @@
 
 // 44. Найти точку пересечения двух прямых заданных уравнением y = k1 * x + b1, y = k2 * x + b2, b1 k1 и b2 и k2 заданы
 
-int k1 = 2; int b1=3;
-int k2 = 4; int b2 = 5;
-int y1, y2; 
+// int k1 = 2; int b1=3;
+// int k2 = 4; int b2 = 5;
+// int y1, y2; 
 
-bool flag = false;
-int[] xr = new int [1000000]; 
-for (int i = 1; i < xr.Length; i++)
-{
-    int x;
-    xr[i] = -500000+i;
-    x = xr[i];
-    y1 = Math.Abs(k1 * x + b1);
-    y2 = Math.Abs(k2 * x + b2);
-    if (y1-y2 == 0) 
-    {
-        flag = true;
-        System.Console.WriteLine("Crossing at x = " + x);
-    }
-}
-if (flag ==true) System.Console.WriteLine("Есть пересечение");
-else System.Console.WriteLine("Нет пересечения");
+// bool flag = false;
+// int[] xr = new int [1000000]; 
+
+// int x;
+// for (int i = 1; i < xr.Length; i++)
+// {
+//     xr[i] = -500000+i;
+//     x = xr[i];
+//     y1 = Math.Abs(k1 * x + b1);
+//     y2 = Math.Abs(k2 * x + b2);
+//     if (y1-y2 == 0) 
+//     {
+//         flag = true;
+//         System.Console.WriteLine("Crossing at x = " + x);
+//     }
+// }
+// if (flag ==true) System.Console.WriteLine("Есть пересечение в точке " + x);
+// else System.Console.WriteLine("Нет пересечения");
 
 // 45. Показать числа Фибоначчи
 // int [] fibo = new int [25];
@@ -141,13 +142,32 @@ else System.Console.WriteLine("Нет пересечения");
 // FillArrayFibo(fibo);
 // System.Console.WriteLine("- fibo sequence");
 // 46. Написать программу масштабирования фигуры
-// ```
-// Тут для тех кто далеко улетел, чтобы задавались вершины фигуры списком (одной строкой)
-// например: "(0,0) (2,0) (2,2) (0,2)"
-// коэффициент масштабирования k задавался отдельно - 2 или 4 или 0.5
-// В результате показать координаты, которые получатся.
-// при k = 2 получаем "(0,0) (4,0) (4,4) (0,4)"
-// ```
+System.Console.WriteLine();
+System.Console.WriteLine("46. Написать программу масштабирования фигуры");
+//сделаем через массивы
+int [] arr46A = {0, 1};
+int [] arr46B = {1, 1};
+int [] arr46C = {2, 1};
+int k = 2;
+void ScaleArr(int[] array)   // метод, наполняющий массив случайными целыми числами и копирующий его
+{
+    for (int index = 0; index < array.Length; index++)
+    {
+        array[index] *= k;
+        System.Console.Write($"{array[index]} ");
+    } 
+}
+
+System.Console.WriteLine("Scaled arrays:");
+ScaleArr(arr46A);
+
+System.Console.WriteLine();
+ScaleArr(arr46B);
+
+System.Console.WriteLine();
+ScaleArr(arr46C);
+
+
 System.Console.WriteLine();
 System.Console.WriteLine("47. Написать программу копирования массива");
 // 47. Написать программу копирования массива
