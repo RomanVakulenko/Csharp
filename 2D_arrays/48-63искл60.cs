@@ -846,10 +846,10 @@ void PrintArray63(int[,,] matr)
             {
                 arr63[i, j, k] = i + 2*j + 4*k + 10;
                 Console.WriteLine("number {0} has index [i{1} j{2} k{3}] ", arr63[i, j, k], i, j, k);
-                System.Console.WriteLine($"index {i}{j}{k} has digit {arr63[i, j, k]}");
+                System.Console.WriteLine($"___________Second variant: index {i}{j}{k} has digit {arr63[i, j, k]}");
             }
         }
-        Console.WriteLine();
+        Console.WriteLine(); 
     }
     Console.WriteLine();
 }
