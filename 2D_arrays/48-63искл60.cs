@@ -849,7 +849,7 @@ void PrintArray63(int[,,] matr)
                 System.Console.WriteLine($"___________Second variant: index {i}{j}{k} has digit {arr63[i, j, k]}");
             }
         }
-        Console.WriteLine(); 
+        Console.WriteLine();
     }
     Console.WriteLine();
 }
