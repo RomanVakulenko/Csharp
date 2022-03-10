@@ -85,51 +85,53 @@
 // }
 // SumOfElements(3, -1);
 // Console.Write("SumOfElements = " + sum);
+
 // 70. Найти сумму цифр числа
 // 71. Написать программу вычисления функции Аккермана
+
 // 72. Написать программу возведения числа А в целую стень B
-double x;
-int y;
-Input(out x, out y);
-PrintResult(x, y, Grade(x, y));
-void Input(out double n, out int m)
-{
-    System.Console.WriteLine("Введите число:  ");
-    n = double.Parse(Console.ReadLine());
-    System.Console.WriteLine("Введите целую степень числа:  ");
-    m = int.Parse(Console.ReadLine());
-}
-double Grade(double a, int b)
-{
-    if (b == 0) return 1;
-    if (b == 1) return a;
-    else return a * Grade(a, b - 1);
-}
-void PrintResult(double a, int b, double c)
-{
-    System.Console.WriteLine($"Результат возведения числа {a} в степень {b} равен {c:F1}.");
-}
+// double x;
+// int y;
+// Input(out x, out y);
+// PrintResult(x, y, Grade(x, y));
+// void Input(out double n, out int m)
+// {
+//     System.Console.WriteLine("Введите число:  ");
+//     n = double.Parse(Console.ReadLine());
+//     System.Console.WriteLine("Введите целую степень числа:  ");
+//     m = int.Parse(Console.ReadLine());
+// }
+// double Grade(double a, int b)
+// {
+//     if (b == 0) return 1;
+//     if (b == 1) return a;
+//     else return a * Grade(a, b - 1);
+// }
+// void PrintResult(double a, int b, double c)
+// {
+//     System.Console.WriteLine($"Результат возведения числа {a} в степень {b} равен {c:F1}.");
+// }
 // 73. Написать программу показывающие первые N чисел, для которых каждое следующее равно сумме двух предыдущих. Первые два элемента последовательности задаются пользователем
-double a, b;
-int c;
+
+int a, b, c;
 
 Input(out a, out b, out c);
 System.Console.WriteLine();
-System.Console.Write($"{a} |{b} |");
+System.Console.Write($"{a}, {b}; ");
 for (int i = 3; i <= c; i++)
 {
-    System.Console.Write($"{(Fibonacci(i-2)*a + Fibonacci(i-1)*b):F1} |");
+    System.Console.Write($"{(Fibonacci(i-2)*a + Fibonacci(i-1)*b):F0}; ");
 }
 
-void Input(out double n, out double m, out int s)
+void Input(out int n, out int m, out int s)
 {
-    System.Console.WriteLine("Введите первое число последовательности:  ");
-    n = double.Parse(Console.ReadLine());
+    System.Console.Write("Введите первое число последовательности:  ");
+    n = int.Parse(Console.ReadLine());
 
-    System.Console.WriteLine("Введите второе число последовательности:  ");
-    m = double.Parse(Console.ReadLine());
+    System.Console.Write("Введите второе число последовательности:  ");
+    m = int.Parse(Console.ReadLine());
 
-    System.Console.WriteLine("Введите количество чисел последовательности:  ");
+    System.Console.Write("Введите количество чисел последовательности:  ");
     s = int.Parse(Console.ReadLine());
 }
 
@@ -139,4 +141,22 @@ double Fibonacci(int n)
      else return Fibonacci(n-1) + Fibonacci(n-2);
  }
  
-// 74. В некотором машинном алфавите имеются четыре буквы «а», «и», «с» и «в». Покажите все слова, состоящие из n букв, которые можно построить из букв этого алфавита
+// 74. В некотором машинном алфавите имеются четыре буквы «а», «и», «с» и «в». Покажите все слова, состоящие из n букв, которые можно построить из букв этого алфавита`
+System.Console.WriteLine();
+System.Console.WriteLine("74. В некотором машинном алфавите имеются четыре буквы «а», «и», «с» и «в». Покажите все слова...");
+int n=1;
+void FindWords(string alphabet, char[] word, int length = 0)
+    {
+        if (length == word.Length)
+        {
+            System.Console.WriteLine($"{n++} {new String(word)}"); return;
+        }
+
+        for (int i = 0; i < alphabet.Length; i++)
+        {
+            word[length] = alphabet[i];
+            FindWords(alphabet, word, length + 1);
+        }
+    }
+    
+FindWords ("аисв", new char[4]);
